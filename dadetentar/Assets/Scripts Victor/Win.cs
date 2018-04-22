@@ -5,6 +5,7 @@ using UnityEngine;
 public class Win : MonoBehaviour
 {
     public static bool ganhou = false;
+    
 
     void Start()
     {

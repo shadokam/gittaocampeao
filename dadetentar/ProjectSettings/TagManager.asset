@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Morte
   - Player2
+  - interface1
   layers:
   - Default
   - TransparentFX
