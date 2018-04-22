@@ -8,8 +8,11 @@ public class playerJump : MonoBehaviour
     public AudioClip jumpSound1;
     public AudioClip jumpSound2;
 
-    [Header("PUBLIC")]
     private Animator animator;
+
+
+
+    [Header("PUBLIC")]
     public static bool grounded;
     public LayerMask whatIsGround;
     private Rigidbody2D myRigidbody;
