@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dash : MonoBehaviour {
+public class Dash : MonoBehaviour
+{
 
-    public AudioClip dashSound1;
     public AudioClip dashSound2;
     public static bool protecaoDoDash = false;
 
@@ -28,32 +28,35 @@ public class Dash : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
     // Update is called once per frame
-    void FixedUpdate() {
-        switch (dashState) {
+    void FixedUpdate()
+    {
+        switch (dashState)
+        {
 
             case DashState.Ready:
                 if (Troca.trocou == false)
                 {
                     tecla = KeyCode.UpArrow;
                 }
-                else {
+                else
+                {
                     tecla = KeyCode.W;
                 }
 
                 if (Input.GetKeyDown(tecla))
-                    {
-                        protecaoDoDash = true;
-                        savedVelocity.x = myRigidbody.velocity.x;
-                        myRigidbody.AddForce(new Vector2 (dashForce*2f, 0));
-                        animator.SetBool("isDashingOrange", true);
-                        animator.SetBool("isDashingBlue", true);
-                    SoundManager.instance.RandomizeSfx(dashSound1, dashSound2);
+                {
+                    protecaoDoDash = true;
+                    savedVelocity.x = myRigidbody.velocity.x;
+                    myRigidbody.AddForce(new Vector2(dashForce * 2f, 0));
+                    animator.SetBool("isDashingOrange", true);
+                    animator.SetBool("isDashingBlue", true);
+                    SoundManager.instance.RandomizeSfx(dashSound2);
                     //myRigidbody.velocity = new Vector2(myRigidbody.velocity.x * 20f, myRigidbody.velocity.y);
                     dashState = DashState.Dashing;
-                        playerJump.grounded = true;
-                        player2Jump.grounded = true;
-                        Debug.Log(myRigidbody.velocity);       
-                    }
+                    playerJump.grounded = true;
+                    player2Jump.grounded = true;
+                    Debug.Log(myRigidbody.velocity);
+                }
                 animator.Play("isWalkingBlue");
                 animator.Play("isWalkingOrange");
                 break;
@@ -85,8 +88,8 @@ public class Dash : MonoBehaviour {
     }
 
 
-    public enum DashState { 
-
-        Ready,Dashing,CoolDown
-}
+    public enum DashState
+    {
+        Ready, Dashing, CoolDown
+    }
 }

@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts Victor\randomGeneration.cs" />
     <Compile Include="Assets\Scripts Victor\StartScene\clicaPlay.cs" />
     <Compile Include="Assets\Scripts Victor\StartScene\goToGame.cs" />
+    <Compile Include="Assets\Scripts Victor\TimeScaleIndependentUpdate.cs" />
     <Compile Include="Assets\Scripts Victor\Troca.cs" />
     <Compile Include="Assets\Scripts Victor\vitoriaCondition.cs" />
     <Compile Include="Assets\Scripts Victor\Win.cs" />
