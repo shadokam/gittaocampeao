@@ -8,11 +8,12 @@ public class Win : MonoBehaviour
 
     void Start()
     {
-        ganhou = false;
+        StartCoroutine(Timer());
     }
 
-    void OnTriggerEnter2D()
+    IEnumerator Timer()
     {
-        ganhou = true;
+        yield return new WaitForSeconds(60);
+        Time.timeScale = 0;
     }
 }
