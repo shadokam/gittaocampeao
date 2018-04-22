@@ -31,7 +31,7 @@ public class randomGeneration : MonoBehaviour {
             }
             if (randomNumber == 2 || randomNumber == 3)
             {
-                obsMediumClone = Instantiate(obsMedium, new Vector2(this.gameObject.transform.position.x + distance, 2.18f), Quaternion.identity) as GameObject;
+                obsMediumClone = Instantiate(obsMedium, new Vector2(this.gameObject.transform.position.x + distance, 2.15f), Quaternion.identity) as GameObject;
             }
             if (randomNumber == 4 || randomNumber == 5){
                 obsHardClone = Instantiate(obsHard, new Vector2(this.gameObject.transform.position.x + distance, 2.05f), Quaternion.identity) as GameObject;
@@ -40,10 +40,10 @@ public class randomGeneration : MonoBehaviour {
                 obsDashClone = Instantiate(obsDash, new Vector2(this.gameObject.transform.position.x + distance, 2.06f), Quaternion.identity) as GameObject;
             }
             if (randomNumber == 8){
-                obsEspinhosClone = Instantiate(obsEspinhos, new Vector2(this.gameObject.transform.position.x + distance, 2.21f), Quaternion.identity) as GameObject;
+                obsEspinhosClone = Instantiate(obsEspinhos, new Vector2(this.gameObject.transform.position.x + distance, 2.05f), Quaternion.identity) as GameObject;
            }
             if (randomNumber == 9){
-                obsVeryHardClone = Instantiate(obsVeryHard, new Vector2(this.gameObject.transform.position.x + distance, 2.078f), Quaternion.identity) as GameObject;
+                obsVeryHardClone = Instantiate(obsVeryHard, new Vector2(this.gameObject.transform.position.x + distance, 2.04f), Quaternion.identity) as GameObject;
             }
             distance = distance + 15;
         }
